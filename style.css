@@ -1,0 +1,85 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #1e1b38;
+	color: #fff;
+	text-align: center;
+}
+.round1, .round1::before, .round1::after, .round2, .round2::after, .round2::before {
+	border: 5px solid transparent;
+	border-radius: 50%;
+}
+
+.round1 {
+	width: 250px;
+	height: 250px;
+	margin: 100px auto;
+	position: relative;
+	border-top-color: #06bbd6;
+	border-right-color: #06bbd6;
+	animation: spin 1s linear infinite;
+}
+.round1::after, .round1::before, .round2::after, .round2::before {
+	content: '';
+	position: absolute;
+}
+
+.round2 {
+	position: absolute;
+}
+
+.round1::before {
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	right: 10px;
+	border-top-color: #fbd100;
+	animation: spin 2s linear infinite;
+}
+
+.round1::after {
+	top: 25px;
+	left: 25px;
+	right: 25px;
+	bottom: 25px;
+	border-top-color: #e52481;
+	animation: spin 3s linear infinite;
+}
+
+.round2 {
+	top: 40px;
+	left: 40px;
+	bottom: 40px;
+	right: 40px;
+	border-top-color: #924ec5;
+	border-right-color: #924ec5;
+	animation: spin 4s linear infinite;
+}
+
+.round2::before {
+	top: 15px;
+	left: 15px;
+	bottom: 15px;
+	right: 15px;
+	border-top-color: #f16003;
+	animation: spin 5s linear infinite;
+}
+
+.round2::after {
+	top: 30px;
+	left: 30px;
+	bottom: 30px;
+	right: 30px;
+	border-top-color: #7cbf17;
+	border-right-color: #7cbf17;
+	animation: spin 6s linear infinite;
+}
+
+@keyframes spin{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
